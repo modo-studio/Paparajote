@@ -20,11 +20,11 @@ extension OAuth2Error: CustomStringConvertible {
     public var description: String {
         switch self {
         case .AlreadyStarted:
-            return "The OAuth2 has already been started. Wait until it completes before calling start again."
+            return "Oauth2 flow already started."
         case .NoResponse:
-            return "We couldn't get a valid response from the provider"
+            return "No response from the provider."
         case .SessionNotFound:
-            return "Session couldn't be found"
+            return "Session not found"
         }
     }
 

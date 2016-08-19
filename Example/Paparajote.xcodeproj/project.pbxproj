@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		23EA8BE51D675D79008333A4 /* OAuth2ControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA8BE41D675D79008333A4 /* OAuth2ControllerSpec.swift */; };
+		23EA8BEB1D67694D008333A4 /* OAuth2ErrorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA8BEA1D67694D008333A4 /* OAuth2ErrorSpec.swift */; };
 		FF91210E4977A690F75DDA69 /* Pods_Paparajote_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36C7E3B884422DF922B6C8F6 /* Pods_Paparajote_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		23EA8BE41D675D79008333A4 /* OAuth2ControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2ControllerSpec.swift; sourceTree = "<group>"; };
+		23EA8BEA1D67694D008333A4 /* OAuth2ErrorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2ErrorSpec.swift; sourceTree = "<group>"; };
 		2856B471986EBD483B09EB81 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		3077F4BECA6E58609BEDFB77 /* Pods-Paparajote_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paparajote_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Paparajote_Tests/Pods-Paparajote_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		36C7E3B884422DF922B6C8F6 /* Pods_Paparajote_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Paparajote_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +43,14 @@
 				23EA8BE41D675D79008333A4 /* OAuth2ControllerSpec.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		23EA8BE91D676944008333A4 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				23EA8BEA1D67694D008333A4 /* OAuth2ErrorSpec.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 		3B6B293F3512B2558381288D /* Pods */ = {
@@ -74,6 +84,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				23EA8BE91D676944008333A4 /* Errors */,
 				23EA8BE31D675D6D008333A4 /* Controllers */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
@@ -241,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23EA8BEB1D67694D008333A4 /* OAuth2ErrorSpec.swift in Sources */,
 				23EA8BE51D675D79008333A4 /* OAuth2ControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
