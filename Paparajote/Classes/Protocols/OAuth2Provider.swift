@@ -6,18 +6,18 @@ public typealias Authorization = () -> NSURL
 /// Given a redirection URL, if it contains the authentication token, this method should return the request for authenticating the user.
 public typealias Authentication = NSURL -> NSURLRequest?
 
-/// The adapter tries to fetch the session from the authentication response. If the session cannot be fetched. The adapter should throw an error.
-public typealias SessionAdapter = (NSData, NSURLResponse) throws -> Session
+/// The adapter tries to fetch the session from the authentication response.
+public typealias SessionAdapter = (NSData, NSURLResponse) -> OAuth2Session?
 
-public protocol Oauth2Provider {
-    
+public protocol OAuth2Provider {
+
     /// Provider authorization.
     var authorization: Authorization { get }
-    
+
     /// Provider authentication.
     var authentication: Authentication { get }
-    
+
     /// Provider session adapter.
     var sessionAdapter: SessionAdapter { get }
-    
+
 }

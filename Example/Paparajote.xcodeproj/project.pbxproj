@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		23EA8BE51D675D79008333A4 /* OAuth2ControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA8BE41D675D79008333A4 /* OAuth2ControllerSpec.swift */; };
 		FF91210E4977A690F75DDA69 /* Pods_Paparajote_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36C7E3B884422DF922B6C8F6 /* Pods_Paparajote_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23EA8BE41D675D79008333A4 /* OAuth2ControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2ControllerSpec.swift; sourceTree = "<group>"; };
 		2856B471986EBD483B09EB81 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		3077F4BECA6E58609BEDFB77 /* Pods-Paparajote_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paparajote_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Paparajote_Tests/Pods-Paparajote_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		36C7E3B884422DF922B6C8F6 /* Pods_Paparajote_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Paparajote_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BA02AA888D109882BD88294 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* Paparajote_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Paparajote_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		660A2347BE8E89D829685393 /* Paparajote.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Paparajote.podspec; path = ../Paparajote.podspec; sourceTree = "<group>"; };
 		EE4CDA25CD3DE9F2FE800483 /* Pods-Paparajote_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paparajote_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Paparajote_Tests/Pods-Paparajote_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -35,6 +35,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23EA8BE31D675D6D008333A4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				23EA8BE41D675D79008333A4 /* OAuth2ControllerSpec.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		3B6B293F3512B2558381288D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -66,7 +74,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				23EA8BE31D675D6D008333A4 /* Controllers */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -128,7 +136,7 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
@@ -233,7 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				23EA8BE51D675D79008333A4 /* OAuth2ControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +334,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3077F4BECA6E58609BEDFB77 /* Pods-Paparajote_Tests.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -338,6 +347,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -345,6 +355,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EE4CDA25CD3DE9F2FE800483 /* Pods-Paparajote_Tests.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
