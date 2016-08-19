@@ -1,9 +1,10 @@
 # Paparajote
 
-[![CI Status](http://img.shields.io/travis/Pedro Piñera Buendía/Paparajote.svg?style=flat)](https://travis-ci.org/Pedro Piñera Buendía/Paparajote)
-[![Version](https://img.shields.io/cocoapods/v/Paparajote.svg?style=flat)](http://cocoapods.org/pods/Paparajote)
-[![License](https://img.shields.io/cocoapods/l/Paparajote.svg?style=flat)](http://cocoapods.org/pods/Paparajote)
-[![Platform](https://img.shields.io/cocoapods/p/Paparajote.svg?style=flat)](http://cocoapods.org/pods/Paparajote)
+![logo](assets/idonethis-kit-logo.png)
+
+[![CI Status](http://img.shields.io/travis/carambalabs/Paparajote.svg?style=flat)](https://travis-ci.org/carambalabs/Paparajote)
+[![codecov](https://codecov.io/gh/carambalabs/Paparajote/branch/master/graph/badge.svg)](https://codecov.io/gh/carambalabs/Paparajote)
+[![Dependency Status](https://gemnasium.com/badges/github.com/carambalabs/Paparajote.svg)](https://gemnasium.com/github.com/carambalabs/Paparajote)
 
 ## Example
 
@@ -22,7 +23,9 @@ pod "Paparajote"
 
 ## Author
 
-Pedro Piñera Buendía, pepibumur@gmail.com
+- Pedro Piñera Buendía, pepibumur@gmail.com
+- Sergi Gracia, sergigram@gmail.com
+- Isaac Roldán, isaac.roldan@gmail.com
 
 ## License
 
