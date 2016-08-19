@@ -1,0 +1,22 @@
+PODS:
+  - Nimble (3.2.0)
+  - Paparajote (0.1.0)
+  - Quick (0.9.3)
+
+DEPENDENCIES:
+  - Nimble (~> 3.0)
+  - Paparajote (from `../`)
+  - Quick (~> 0.8)
+
+EXTERNAL SOURCES:
+  Paparajote:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
+  Paparajote: aec7c9d40fc51e32e38469cb4a333bfd9d23fcc4
+  Quick: 13a2a2b19a5d8e3ed4fd0c36ee46597fd77ebf71
+
+PODFILE CHECKSUM: 3ba96eb1a09777d22d79942dfef9b0de44d5cabf
+
+COCOAPODS: 1.0.1
