@@ -8,10 +8,10 @@ import UIKit
 
     // MARK: - Attributes
 
-    private let provider: OAuth2Provider
-    private let sessionCompletion: OAuth2SessionCompletion
-    private var controller: OAuth2Controller!
-    private weak var webView: UIWebView?
+    internal let provider: OAuth2Provider
+    internal let sessionCompletion: OAuth2SessionCompletion
+    internal var controller: OAuth2Controller!
+    internal weak var webView: UIWebView?
 
     // MARK: - Init
 

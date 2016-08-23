@@ -4,10 +4,10 @@ public class OAuth2Controller {
 
     // MARK: - Attributes
 
-    private weak var delegate: OAuth2Delegate?
-    private let provider: OAuth2Provider
-    private let service: Service
-    private var inProgress: Bool = false
+    internal weak var delegate: OAuth2Delegate?
+    internal let provider: OAuth2Provider
+    internal let service: Service
+    internal var inProgress: Bool = false
 
     // MARK: - Init
 
@@ -34,7 +34,7 @@ public class OAuth2Controller {
     public func shouldRedirect(url url: NSURL) -> Bool {
         guard let request = self.provider.authentication(url) else { return true }
         self.authenticate(request: request)
-        return true
+        return false
     }
 
     // MARK: - Private
