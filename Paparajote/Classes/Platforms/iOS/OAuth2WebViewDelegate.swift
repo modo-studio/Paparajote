@@ -3,20 +3,28 @@
 import Foundation
 import UIKit
 
-public typealias SessionCompletion = (OAuth2Session?, ErrorType?) -> ()
-
-@objc public class OAuth2WebviewDelegate: NSObject, UIWebViewDelegate, OAuth2Delegate {
+/// UIWebView delegate object that handles the OAuth2 login.
+@objc public class OAuth2WebViewDelegate: NSObject, UIWebViewDelegate, OAuth2Delegate {
 
     // MARK: - Attributes
 
     private let provider: OAuth2Provider
-    private let sessionCompletion: SessionCompletion
+    private let sessionCompletion: OAuth2SessionCompletion
     private var controller: OAuth2Controller!
     private weak var webView: UIWebView?
 
     // MARK: - Init
 
-    public init(provider: OAuth2Provider, webView: UIWebView, sessionCompletion: SessionCompletion) {
+    /**
+     Initializes the OAuth2WebViewDelegate.
+
+     - parameter provider:          OAuth2 provider.
+     - parameter webView:           UIWebview where the authentication will be loaded.
+     - parameter sessionCompletion: Callback to notify about the OAuth2 completion.
+
+     - returns: Initialized OAuth2WebViewDelegate instance.
+     */
+    public init(provider: OAuth2Provider, webView: UIWebView, sessionCompletion: OAuth2SessionCompletion) {
         self.provider = provider
         self.webView = webView
         self.sessionCompletion = sessionCompletion
@@ -30,6 +38,11 @@ public typealias SessionCompletion = (OAuth2Session?, ErrorType?) -> ()
 
     // MARK: - Public
 
+    /**
+     Starts the OAuth2 flow.
+
+     - throws: An error if this method is called once the flow has started.
+     */
     public func start() throws {
         if self.controller == nil {
             self.controller = OAuth2Controller(provider: provider, delegate: self)
