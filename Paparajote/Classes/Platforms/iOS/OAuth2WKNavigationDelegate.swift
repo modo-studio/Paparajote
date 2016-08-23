@@ -16,11 +16,11 @@ import WebKit
 
     /**
      Initializes the OAuth2WKNavigationDelegate.
-     
+
      - parameter provider:   OAuth2 provider.
      - parameter webView:    WKWebView where the authentication will be loaded.
      - parameter completion: Callback to notify about the OAuth2 completion.
-     
+
      - returns: Initialized instance of OAuth2WKNavigationDelegate.
      */
     internal init(provider: OAuth2Provider, webView: WKWebView, completion: OAuth2SessionCompletion) {
@@ -33,7 +33,7 @@ import WebKit
 
     /**
      Starts the OAuth2 flow.
-     
+
      - throws: It throws an exception if this method is called again once the flow has started.
      */
     public func start() throws {

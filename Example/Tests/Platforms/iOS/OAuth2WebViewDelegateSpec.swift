@@ -16,7 +16,7 @@ class OAuth2WebViewDelegateSpec: QuickSpec {
         beforeEach {
             provider = MockProvider()
             webview = MockWebView()
-            subject = OAuth2WebViewDelegate(provider: provider, webView: webview, sessionCompletion: { (session, error) in
+            subject = OAuth2WebViewDelegate(provider: provider, webView: webview, completion: { (session, error) in
                 completionError = error
                 completionSession = session
             })

@@ -8,6 +8,14 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+## TODO
+- [ ] Test OAuth2WKNavigationDelegate
+- [ ] Test OAuth2WebView
+- [ ] Test OAuth2WKWebView
+- [ ] Implement OAuth2 delegate for macOS webview.
+- [ ] Document the library README file.
+- [ ] Add a few providers *(GitHub, Facebook, GitLab, Twitter)*...
+
 ## Requirements
 
 ## Installation

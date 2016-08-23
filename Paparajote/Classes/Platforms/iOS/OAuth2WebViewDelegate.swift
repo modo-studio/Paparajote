@@ -9,7 +9,7 @@ import UIKit
     // MARK: - Attributes
 
     internal let provider: OAuth2Provider
-    internal let sessionCompletion: OAuth2SessionCompletion
+    internal let completion: OAuth2SessionCompletion
     internal var controller: OAuth2Controller!
     internal weak var webView: UIWebView?
 
@@ -20,14 +20,14 @@ import UIKit
 
      - parameter provider:          OAuth2 provider.
      - parameter webView:           UIWebview where the authentication will be loaded.
-     - parameter sessionCompletion: Callback to notify about the OAuth2 completion.
+     - parameter completion: Callback to notify about the OAuth2 completion.
 
      - returns: Initialized OAuth2WebViewDelegate instance.
      */
-    public init(provider: OAuth2Provider, webView: UIWebView, sessionCompletion: OAuth2SessionCompletion) {
+    public init(provider: OAuth2Provider, webView: UIWebView, completion: OAuth2SessionCompletion) {
         self.provider = provider
         self.webView = webView
-        self.sessionCompletion = sessionCompletion
+        self.completion = completion
         super.init()
         self.webView?.delegate = self
     }
@@ -55,11 +55,11 @@ import UIKit
     public func oauth(event event: OAuth2Event) {
         switch event {
         case .Error(let error):
-            self.sessionCompletion(nil, error)
+            self.completion(nil, error)
         case .Open(let url):
             self.webView?.loadRequest(NSURLRequest(URL: url))
         case .Session(let session):
-            self.sessionCompletion(session, nil)
+            self.completion(session, nil)
         }
     }
 
