@@ -10,6 +10,7 @@
 		23EA8BE51D675D79008333A4 /* OAuth2ControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA8BE41D675D79008333A4 /* OAuth2ControllerSpec.swift */; };
 		23EA8BEB1D67694D008333A4 /* OAuth2ErrorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA8BEA1D67694D008333A4 /* OAuth2ErrorSpec.swift */; };
 		23EA8BFF1D6C5A60008333A4 /* OAuth2WebViewDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA8BFE1D6C5A60008333A4 /* OAuth2WebViewDelegateSpec.swift */; };
+		23EA8C051D6C7474008333A4 /* OAuth2WKNavigationDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA8C041D6C7474008333A4 /* OAuth2WKNavigationDelegateSpec.swift */; };
 		FF91210E4977A690F75DDA69 /* Pods_Paparajote_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36C7E3B884422DF922B6C8F6 /* Pods_Paparajote_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -17,6 +18,7 @@
 		23EA8BE41D675D79008333A4 /* OAuth2ControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2ControllerSpec.swift; sourceTree = "<group>"; };
 		23EA8BEA1D67694D008333A4 /* OAuth2ErrorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2ErrorSpec.swift; sourceTree = "<group>"; };
 		23EA8BFE1D6C5A60008333A4 /* OAuth2WebViewDelegateSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2WebViewDelegateSpec.swift; sourceTree = "<group>"; };
+		23EA8C041D6C7474008333A4 /* OAuth2WKNavigationDelegateSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2WKNavigationDelegateSpec.swift; sourceTree = "<group>"; };
 		2856B471986EBD483B09EB81 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		3077F4BECA6E58609BEDFB77 /* Pods-Paparajote_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paparajote_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Paparajote_Tests/Pods-Paparajote_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		36C7E3B884422DF922B6C8F6 /* Pods_Paparajote_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Paparajote_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				23EA8BFE1D6C5A60008333A4 /* OAuth2WebViewDelegateSpec.swift */,
+				23EA8C041D6C7474008333A4 /* OAuth2WKNavigationDelegateSpec.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			files = (
 				23EA8BEB1D67694D008333A4 /* OAuth2ErrorSpec.swift in Sources */,
 				23EA8BE51D675D79008333A4 /* OAuth2ControllerSpec.swift in Sources */,
+				23EA8C051D6C7474008333A4 /* OAuth2WKNavigationDelegateSpec.swift in Sources */,
 				23EA8BFF1D6C5A60008333A4 /* OAuth2WebViewDelegateSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
