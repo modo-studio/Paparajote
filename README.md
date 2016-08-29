@@ -63,13 +63,13 @@ If you're using `UIWebView` from `UIKit` you can trigger the OAuth2 with a few s
 #### Using WKWebView
 
 
-### OAuth2 on macOS :mac:
-
+### OAuth2 on macOS :computer:
+//TODO
 
 
 ## About
 
-<img src="https://github.com/carambalabs/Foundation/raw/master/assets/avatar_rounded.png" width="70" />
+<img src="https://github.com/carambalabs/Paparajote/blob/master/ASSETS/avatar_rounded.png" width="70" />
 
 This project is funded and maintained by [Caramba](http://caramba.in). We 💛 open source software!
 
