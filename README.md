@@ -67,11 +67,17 @@ If you're using `UIWebView` from `UIKit` you can trigger the OAuth2 with a few s
 
 
 
-## Author
+## About
 
-- Pedro Piñera Buendía, pepibumur@gmail.com
-- Sergi Gracia, sergigram@gmail.com
-- Isaac Roldán, isaac.roldan@gmail.com
+<img src="https://github.com/carambalabs/Foundation/raw/master/assets/avatar_rounded.png" width="70" />
+
+This project is funded and maintained by [Caramba](http://caramba.in). We 💛 open source software!
+
+Check out our other [open source projects](https://github.com/carambalabs/), read our [blog](http://blog.caramba.in) or say :wave: on twitter [@carambalabs](http://twitter.com/carambalabs).
+
+## Contribute
+
+Contributions are welcome :metal: We encourage developers like you to help us improve the projects we've shared with the community. Please see the [Contributing Guide](https://github.com/carambalabs/Foundation/blob/master/CONTRIBUTING.md) and the [Code of Conduct](https://github.com/carambalabs/Foundation/blob/master/CONDUCT.md).
 
 ## License
 
