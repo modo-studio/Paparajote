@@ -43,15 +43,19 @@ class OAuth2WKNavigationDelegateSpec: QuickSpec {
             
             var returnedPolicy: WKNavigationActionPolicy!
             
-            context("when the navigation action doesnt' include UR") {
+            context("when the navigation action doesn't include URL") {
                 
                 beforeEach {
+                    subject.webView(webView, decidePolicyForNavigationAction: WKNavigationAction(), decisionHandler: { (policy) in
+                        returnedPolicy = policy
+                    })
                 }
                 
                 it("should allow navigation") {
                     expect(returnedPolicy) == WKNavigationActionPolicy.Allow
                 }
             }
+            
         }
         
     }

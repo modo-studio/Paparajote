@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		237C17531D762A2C00CB3B4F /* OAuth2WKWebViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C17521D762A2C00CB3B4F /* OAuth2WKWebViewSpec.swift */; };
 		23EA8BE51D675D79008333A4 /* OAuth2ControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA8BE41D675D79008333A4 /* OAuth2ControllerSpec.swift */; };
 		23EA8BEB1D67694D008333A4 /* OAuth2ErrorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA8BEA1D67694D008333A4 /* OAuth2ErrorSpec.swift */; };
 		23EA8BFF1D6C5A60008333A4 /* OAuth2WebViewDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA8BFE1D6C5A60008333A4 /* OAuth2WebViewDelegateSpec.swift */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		237C17521D762A2C00CB3B4F /* OAuth2WKWebViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2WKWebViewSpec.swift; sourceTree = "<group>"; };
 		23EA8BE41D675D79008333A4 /* OAuth2ControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2ControllerSpec.swift; sourceTree = "<group>"; };
 		23EA8BEA1D67694D008333A4 /* OAuth2ErrorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2ErrorSpec.swift; sourceTree = "<group>"; };
 		23EA8BFE1D6C5A60008333A4 /* OAuth2WebViewDelegateSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2WebViewDelegateSpec.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			children = (
 				23EA8BFE1D6C5A60008333A4 /* OAuth2WebViewDelegateSpec.swift */,
 				23EA8C041D6C7474008333A4 /* OAuth2WKNavigationDelegateSpec.swift */,
+				237C17521D762A2C00CB3B4F /* OAuth2WKWebViewSpec.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				23EA8BEB1D67694D008333A4 /* OAuth2ErrorSpec.swift in Sources */,
 				23EA8BE51D675D79008333A4 /* OAuth2ControllerSpec.swift in Sources */,
 				23EA8C051D6C7474008333A4 /* OAuth2WKNavigationDelegateSpec.swift in Sources */,
+				237C17531D762A2C00CB3B4F /* OAuth2WKWebViewSpec.swift in Sources */,
 				23EA8BFF1D6C5A60008333A4 /* OAuth2WebViewDelegateSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
