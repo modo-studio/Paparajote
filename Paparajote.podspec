@@ -17,4 +17,5 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Paparajote/Classes/**/*'
 
+  s.dependency 'NSURL+QueryDictionary', '~> 1.2'
 end
