@@ -16,6 +16,5 @@ Pod::Spec.new do |s|
   s.watchos.deployment_target = '2.0'
 
   s.source_files = 'Paparajote/Classes/**/*'
-  # s.resources = ['Paparajote/Assets/Providers/*.json']
 
 end
