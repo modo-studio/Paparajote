@@ -7,10 +7,10 @@ import WebKit
 
     // MARK: - Attributes
 
-    private let provider: OAuth2Provider
-    private var controller: OAuth2Controller!
-    private weak var webView: WKWebView?
-    private let completion: OAuth2SessionCompletion
+    internal let provider: OAuth2Provider
+    internal var controller: OAuth2Controller!
+    internal weak var webView: WKWebView?
+    internal let completion: OAuth2SessionCompletion
 
     // MARK: - Init
 
