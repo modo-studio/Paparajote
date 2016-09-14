@@ -1,7 +1,7 @@
 import Foundation
 
 internal extension String {
-    
+
     static func random(length: Int = 10) -> String {
         let allowedChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
         let allowedCharsCount = UInt32(allowedChars.characters.count)
@@ -13,5 +13,5 @@ internal extension String {
         }
         return randomString
     }
-    
+
 }

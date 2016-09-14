@@ -2,18 +2,18 @@ import Foundation
 import NSURL_QueryDictionary
 
 public struct GitHubProvider: OAuth2Provider {
-    
+
     // MARK: - Attributes
-    
+
     private let clientId: String
     private let clientSecret: String
     private let redirectUri: String
     private let scope: [String]
     private let state: String
     private let allowSignup: Bool
-    
+
     // MARK: - Init
-    
+
     public init(clientId: String, clientSecret: String, redirectUri: String, allowSignup: Bool = true, scope: [String] = [], state: String = String.random()) {
         self.clientId = clientId
         self.clientSecret = clientSecret
@@ -22,10 +22,9 @@ public struct GitHubProvider: OAuth2Provider {
         self.scope = scope
         self.state = state
     }
-    
-    
+
     // MARK: - Oauth2Provider
-    
+
     public var authorization: Authorization {
         get {
             return { () -> NSURL in
@@ -62,11 +61,11 @@ public struct GitHubProvider: OAuth2Provider {
             }
         }
     }
-    
+
     public var sessionAdapter: SessionAdapter = { (data,  _) -> OAuth2Session? in
         let json = try? NSJSONSerialization.JSONObjectWithData(data, options: [])
         guard let dictionary = json as? [String: String] else { return nil }
         return dictionary["access_token"].map {OAuth2Session(accessToken: $0, refreshToken: nil)}
     }
-    
+
 }

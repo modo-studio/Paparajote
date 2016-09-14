@@ -55,7 +55,7 @@ class OAuth2WebViewDelegateSpec: QuickSpec {
                 }
                 
                 it("should send the error to the completion closure") {
-                    expect(error) == completionError as! OAuth2Error
+                    expect(error) == completionError as? OAuth2Error
                 }
             }
             

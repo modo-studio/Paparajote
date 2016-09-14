@@ -39,21 +39,6 @@ class OAuth2WKNavigationDelegateSpec: QuickSpec {
             }
         }
         
-        describe("-webView:webView:decidePolicyForNavigationAction:decisionHandler") {
-            
-            var returnedPolicy: WKNavigationActionPolicy!
-            
-            context("when the navigation action doesnt' include UR") {
-                
-                beforeEach {
-                }
-                
-                it("should allow navigation") {
-                    expect(returnedPolicy) == WKNavigationActionPolicy.Allow
-                }
-            }
-        }
-        
     }
 }
 
