@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		237C17561D76313100CB3B4F /* GitHubProviderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C17551D76313100CB3B4F /* GitHubProviderSpec.swift */; };
 		23EA8BE51D675D79008333A4 /* OAuth2ControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA8BE41D675D79008333A4 /* OAuth2ControllerSpec.swift */; };
 		23EA8BEB1D67694D008333A4 /* OAuth2ErrorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA8BEA1D67694D008333A4 /* OAuth2ErrorSpec.swift */; };
 		23EA8BFF1D6C5A60008333A4 /* OAuth2WebViewDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA8BFE1D6C5A60008333A4 /* OAuth2WebViewDelegateSpec.swift */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		237C17551D76313100CB3B4F /* GitHubProviderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubProviderSpec.swift; sourceTree = "<group>"; };
 		23EA8BE41D675D79008333A4 /* OAuth2ControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2ControllerSpec.swift; sourceTree = "<group>"; };
 		23EA8BEA1D67694D008333A4 /* OAuth2ErrorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2ErrorSpec.swift; sourceTree = "<group>"; };
 		23EA8BFE1D6C5A60008333A4 /* OAuth2WebViewDelegateSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2WebViewDelegateSpec.swift; sourceTree = "<group>"; };
@@ -41,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		237C17541D76312000CB3B4F /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				237C17551D76313100CB3B4F /* GitHubProviderSpec.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
 		23EA8BE31D675D6D008333A4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +115,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				237C17541D76312000CB3B4F /* Providers */,
 				23EA8BFC1D6C5A50008333A4 /* Platforms */,
 				23EA8BE91D676944008333A4 /* Errors */,
 				23EA8BE31D675D6D008333A4 /* Controllers */,
@@ -275,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23EA8BEB1D67694D008333A4 /* OAuth2ErrorSpec.swift in Sources */,
+				237C17561D76313100CB3B4F /* GitHubProviderSpec.swift in Sources */,
 				23EA8BE51D675D79008333A4 /* OAuth2ControllerSpec.swift in Sources */,
 				23EA8C051D6C7474008333A4 /* OAuth2WKNavigationDelegateSpec.swift in Sources */,
 				23EA8BFF1D6C5A60008333A4 /* OAuth2WebViewDelegateSpec.swift in Sources */,
