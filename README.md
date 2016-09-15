@@ -42,6 +42,8 @@ public protocol OAuth2Provider {
 - **Authentication:** Returns an authentication request if the url contains an authentication token.
 - **SessionAdapter:** Extracts the session from the authentication response data.
 
+> You can check out the existing providers [here](Paparajote/Classes/Providers)
+
 ### OAuth2 on iOS :iphone:
 
 #### Using UIWebView
