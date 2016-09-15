@@ -7,16 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		235A87E51D8AF7E800740139 /* Paparajote_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235A87E41D8AF7E800740139 /* Paparajote_macOS.swift */; };
 		237C17561D76313100CB3B4F /* GitHubProviderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C17551D76313100CB3B4F /* GitHubProviderSpec.swift */; };
 		23EA8BE51D675D79008333A4 /* OAuth2ControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA8BE41D675D79008333A4 /* OAuth2ControllerSpec.swift */; };
 		23EA8BEB1D67694D008333A4 /* OAuth2ErrorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA8BEA1D67694D008333A4 /* OAuth2ErrorSpec.swift */; };
 		23EA8BFF1D6C5A60008333A4 /* OAuth2WebViewDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA8BFE1D6C5A60008333A4 /* OAuth2WebViewDelegateSpec.swift */; };
 		23EA8C051D6C7474008333A4 /* OAuth2WKNavigationDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA8C041D6C7474008333A4 /* OAuth2WKNavigationDelegateSpec.swift */; };
+		29244A4F5A27F652153C6857 /* Pods_Paparajote_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 413BEBEB0CCE8D226D1D2C78 /* Pods_Paparajote_macOS.framework */; };
 		FF91210E4977A690F75DDA69 /* Pods_Paparajote_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36C7E3B884422DF922B6C8F6 /* Pods_Paparajote_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		235A87E21D8AF7E800740139 /* Paparajote_macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Paparajote_macOS.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		235A87E41D8AF7E800740139 /* Paparajote_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paparajote_macOS.swift; sourceTree = "<group>"; };
+		235A87E61D8AF7E800740139 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		237C17551D76313100CB3B4F /* GitHubProviderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubProviderSpec.swift; sourceTree = "<group>"; };
+		23B1166CE1CCC5B4D4F340D6 /* Pods-Paparajote_macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paparajote_macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Paparajote_macOS/Pods-Paparajote_macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		23EA8BE41D675D79008333A4 /* OAuth2ControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2ControllerSpec.swift; sourceTree = "<group>"; };
 		23EA8BEA1D67694D008333A4 /* OAuth2ErrorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2ErrorSpec.swift; sourceTree = "<group>"; };
 		23EA8BFE1D6C5A60008333A4 /* OAuth2WebViewDelegateSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2WebViewDelegateSpec.swift; sourceTree = "<group>"; };
@@ -24,14 +30,24 @@
 		2856B471986EBD483B09EB81 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		3077F4BECA6E58609BEDFB77 /* Pods-Paparajote_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paparajote_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Paparajote_Tests/Pods-Paparajote_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		36C7E3B884422DF922B6C8F6 /* Pods_Paparajote_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Paparajote_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		413BEBEB0CCE8D226D1D2C78 /* Pods_Paparajote_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Paparajote_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BA02AA888D109882BD88294 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* Paparajote_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Paparajote_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		660A2347BE8E89D829685393 /* Paparajote.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Paparajote.podspec; path = ../Paparajote.podspec; sourceTree = "<group>"; };
+		AC8F2000FD3DC92D43A4CBB4 /* Pods-Paparajote_macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paparajote_macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Paparajote_macOS/Pods-Paparajote_macOS.release.xcconfig"; sourceTree = "<group>"; };
 		EE4CDA25CD3DE9F2FE800483 /* Pods-Paparajote_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paparajote_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Paparajote_Tests/Pods-Paparajote_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		235A87DF1D8AF7E800740139 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29244A4F5A27F652153C6857 /* Pods_Paparajote_macOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACE21AFB9204008FA782 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -43,6 +59,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		235A87E31D8AF7E800740139 /* Paparajote_macOS */ = {
+			isa = PBXGroup;
+			children = (
+				235A87E41D8AF7E800740139 /* Paparajote_macOS.swift */,
+				235A87E61D8AF7E800740139 /* Info.plist */,
+			);
+			path = Paparajote_macOS;
+			sourceTree = "<group>";
+		};
 		237C17541D76312000CB3B4F /* Providers */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +114,8 @@
 			children = (
 				3077F4BECA6E58609BEDFB77 /* Pods-Paparajote_Tests.debug.xcconfig */,
 				EE4CDA25CD3DE9F2FE800483 /* Pods-Paparajote_Tests.release.xcconfig */,
+				23B1166CE1CCC5B4D4F340D6 /* Pods-Paparajote_macOS.debug.xcconfig */,
+				AC8F2000FD3DC92D43A4CBB4 /* Pods-Paparajote_macOS.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -98,6 +125,7 @@
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACE81AFB9204008FA782 /* Tests */,
+				235A87E31D8AF7E800740139 /* Paparajote_macOS */,
 				607FACD11AFB9204008FA782 /* Products */,
 				3B6B293F3512B2558381288D /* Pods */,
 				ABFF489E15823DF5E41D3C9B /* Frameworks */,
@@ -108,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACE51AFB9204008FA782 /* Paparajote_Tests.xctest */,
+				235A87E21D8AF7E800740139 /* Paparajote_macOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				36C7E3B884422DF922B6C8F6 /* Pods_Paparajote_Tests.framework */,
+				413BEBEB0CCE8D226D1D2C78 /* Pods_Paparajote_macOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -153,6 +183,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		235A87E11D8AF7E800740139 /* Paparajote_macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 235A87E91D8AF7E800740139 /* Build configuration list for PBXNativeTarget "Paparajote_macOS" */;
+			buildPhases = (
+				C470321A23607A9FEB847C3D /* [CP] Check Pods Manifest.lock */,
+				235A87DE1D8AF7E800740139 /* Sources */,
+				235A87DF1D8AF7E800740139 /* Frameworks */,
+				235A87E01D8AF7E800740139 /* Resources */,
+				D1B54976AD66F3B154496658 /* [CP] Embed Pods Frameworks */,
+				9B682128742FC7E92548EDDA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Paparajote_macOS;
+			productName = Paparajote_macOS;
+			productReference = 235A87E21D8AF7E800740139 /* Paparajote_macOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		607FACE41AFB9204008FA782 /* Paparajote_Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Paparajote_Tests" */;
@@ -184,6 +234,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
+					235A87E11D8AF7E800740139 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						TestTargetID = 607FACCF1AFB9204008FA782;
@@ -204,11 +257,19 @@
 			projectRoot = "";
 			targets = (
 				607FACE41AFB9204008FA782 /* Paparajote_Tests */,
+				235A87E11D8AF7E800740139 /* Paparajote_macOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		235A87E01D8AF7E800740139 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACE31AFB9204008FA782 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -248,6 +309,51 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		9B682128742FC7E92548EDDA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Paparajote_macOS/Pods-Paparajote_macOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C470321A23607A9FEB847C3D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D1B54976AD66F3B154496658 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Paparajote_macOS/Pods-Paparajote_macOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D3411E6C6996EB9896960C6C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -281,6 +387,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		235A87DE1D8AF7E800740139 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				235A87E51D8AF7E800740139 /* Paparajote_macOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACE11AFB9204008FA782 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -296,6 +410,39 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		235A87E71D8AF7E800740139 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23B1166CE1CCC5B4D4F340D6 /* Pods-Paparajote_macOS.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = Paparajote_macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.caramba.Paparajote-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		235A87E81D8AF7E800740139 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC8F2000FD3DC92D43A4CBB4 /* Pods-Paparajote_macOS.release.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Paparajote_macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.caramba.Paparajote-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		607FACED1AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -418,6 +565,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		235A87E91D8AF7E800740139 /* Build configuration list for PBXNativeTarget "Paparajote_macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				235A87E71D8AF7E800740139 /* Debug */,
+				235A87E81D8AF7E800740139 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "Paparajote" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

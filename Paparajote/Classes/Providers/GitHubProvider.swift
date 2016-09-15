@@ -53,11 +53,11 @@ public struct GitHubProvider: OAuth2Provider {
                         "redirect_uri": self.redirectUri,
                         "state": self.state
                     ])
-                var request = NSMutableURLRequest()
+                let request = NSMutableURLRequest()
                 request.addValue("application/json", forHTTPHeaderField: "Accept")
                 request.HTTPMethod = "POST"
                 request.URL = authenticationUrl
-                return request.copy() as! NSURLRequest
+                return request.copy() as? NSURLRequest
             }
         }
     }

@@ -42,11 +42,7 @@ public protocol OAuth2Provider {
 - **Authentication:** Returns an authentication request if the url contains an authentication token.
 - **SessionAdapter:** Extracts the session from the authentication response data.
 
-> You can check out the existing providers [here](Paparajote/Classes/Providers)
-
-### OAuth2 on iOS :iphone:
-
-#### Using UIWebView
+#### Using UIWebView *(iOS only)*
 
 If you're using `UIWebView` from `UIKit` you can trigger the OAuth2 with a few simple steps:
 
@@ -54,12 +50,12 @@ If you're using `UIWebView` from `UIKit` you can trigger the OAuth2 with a few s
 2. Keep a reference to that delegate from your `ViewController`.
 
 
-#### Using WKWebView
+#### Using WKWebView *(iOS and macOS)*
 
+If you're using `WKWebView` from `WKWebKit` you can trigger the OAuth2 with a few simple steps:
 
-### OAuth2 on macOS :computer:
-//TODO
-
+1. Create an instance of `OAuth2WKNavigationDelegate` passing the provider, the webview, and a completion closure that will be executed once the authentication completes.
+2. Keep a reference to that delegate from your `ViewController`.
 
 ## About
 
