@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.name             = 'Paparajote'
   s.version          = '0.1.8'
   s.summary          = 'OAuth2 handler written in Swift'
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/Paparajote'
+  s.homepage         = 'https://github.com/carambalabs/Paparajote'
   s.social_media_url = "https://twitter.com/carambalabs"
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Pedro Piñera' => 'pepibumur@gmail.com', 'Sergi Gracia' => 'sergigram@gmail.com', 'Isaac Roldán' => "isaac.roldan@gmail.com" }
