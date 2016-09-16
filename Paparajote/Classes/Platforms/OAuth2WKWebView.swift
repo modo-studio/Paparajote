@@ -1,10 +1,10 @@
-#if os(iOS)
+#if os(iOS) || os(OSX)
 
 import Foundation
-import UIKit
 import WebKit
 
 /// OAuth2 WKWebView
+@available(OSX 10.10, *)
 public class OAuth2WKWebView: WKWebView {
 
     // MARK: - Attributes

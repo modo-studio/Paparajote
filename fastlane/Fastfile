@@ -5,7 +5,7 @@ lane :pods do
 end
 
 lane :tests do
-  scan(workspace: "Example/Paparajote.xcworkspace", scheme: "Paparajote-Example", clean: true)
+  scan(workspace: "Example/Paparajote.xcworkspace", scheme: "Paparajote", clean: true)
 end
 
 lane :travis do

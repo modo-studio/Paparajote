@@ -9,20 +9,6 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "Paparajote_Example.app"
-               BlueprintName = "Paparajote_Example"
-               ReferencedContainer = "container:Paparajote.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
             buildForAnalyzing = "YES">
@@ -53,16 +39,17 @@
                ReferencedContainer = "container:Paparajote.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "235A87E11D8AF7E800740139"
+               BuildableName = "Paparajote_macOS.xctest"
+               BlueprintName = "Paparajote_macOS"
+               ReferencedContainer = "container:Paparajote.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "Paparajote_Example.app"
-            BlueprintName = "Paparajote_Example"
-            ReferencedContainer = "container:Paparajote.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -76,16 +63,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "Paparajote_Example.app"
-            BlueprintName = "Paparajote_Example"
+            BlueprintIdentifier = "607FACE41AFB9204008FA782"
+            BuildableName = "Paparajote_Tests.xctest"
+            BlueprintName = "Paparajote_Tests"
             ReferencedContainer = "container:Paparajote.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -95,16 +81,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "Paparajote_Example.app"
-            BlueprintName = "Paparajote_Example"
+            BlueprintIdentifier = "607FACE41AFB9204008FA782"
+            BuildableName = "Paparajote_Tests.xctest"
+            BlueprintName = "Paparajote_Tests"
             ReferencedContainer = "container:Paparajote.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

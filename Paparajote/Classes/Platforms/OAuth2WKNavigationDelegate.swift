@@ -1,8 +1,9 @@
-#if os(iOS)
+#if os(iOS) || os(OSX)
 import Foundation
 import WebKit
 
 /// WKNavigationDelegate that handles the OAuth2 flow.
+@available(OSX 10.10, *)
 @objc public class OAuth2WKNavigationDelegate: NSObject, WKNavigationDelegate, OAuth2Delegate {
 
     // MARK: - Attributes
