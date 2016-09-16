@@ -1,7 +1,7 @@
 PODS:
   - Nimble (3.2.0)
   - NSURL+QueryDictionary (1.2.0)
-  - Paparajote (0.1.5):
+  - Paparajote (0.1.8):
     - NSURL+QueryDictionary (~> 1.2)
   - Quick (0.9.3)
 
@@ -17,7 +17,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
   NSURL+QueryDictionary: bae616404e2adf6409d3d5c02a093cbf44c8a236
-  Paparajote: 7c6c5c371dd7b0383c13ca34fcab9bf28b6dadb3
+  Paparajote: 7a3ce1f900b90c61b3f0c989384ef1f185c04904
   Quick: 13a2a2b19a5d8e3ed4fd0c36ee46597fd77ebf71
 
 PODFILE CHECKSUM: 8e5ca4a24d77f3b24b779f0a0423e282ad70e483
