@@ -38,6 +38,7 @@ public struct GitHubProvider: OAuth2Provider {
             }
         }
     }
+
     public var authentication: Authentication {
         get {
             return { url -> NSURLRequest? in
