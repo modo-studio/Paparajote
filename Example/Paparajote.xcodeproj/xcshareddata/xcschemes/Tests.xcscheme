@@ -39,17 +39,16 @@
                ReferencedContainer = "container:Paparajote.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "235A87E11D8AF7E800740139"
-               BuildableName = "Paparajote_macOS.xctest"
-               BlueprintName = "Paparajote_macOS"
-               ReferencedContainer = "container:Paparajote.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "607FACE41AFB9204008FA782"
+            BuildableName = "Paparajote_Tests.xctest"
+            BlueprintName = "Paparajote_Tests"
+            ReferencedContainer = "container:Paparajote.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>

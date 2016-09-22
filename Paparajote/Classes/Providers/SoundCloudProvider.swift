@@ -1,25 +1,24 @@
 import Foundation
 import NSURL_QueryDictionary
 
-public struct GitHubProvider: OAuth2Provider {
+public struct SoundCloudProvider: OAuth2Provider {
 
     // MARK: - Attributes
 
-    private let clientId: String
-    private let clientSecret: String
-    private let redirectUri: String
-    private let scope: [String]
-    private let state: String
-    private let allowSignup: Bool
+    private let clientId: String //client_id
+    private let clientSecret: String //client_secret
+    private let redirectUri: String //redirect_uri
+    private let responseType: String = "code" //response_type
+    private let scope: String = "*" //scope
+    private let display: String = "popup" //display
+    private let state: String //state
 
     // MARK: - Init
 
-    public init(clientId: String, clientSecret: String, redirectUri: String, allowSignup: Bool = true, scope: [String] = [], state: String = String.random()) {
+    public init(clientId: String, clientSecret: String, redirectUri: String, state: String = String.random()) {
         self.clientId = clientId
         self.clientSecret = clientSecret
         self.redirectUri = redirectUri
-        self.allowSignup = allowSignup
-        self.scope = scope
         self.state = state
     }
 
@@ -28,12 +27,14 @@ public struct GitHubProvider: OAuth2Provider {
     public var authorization: Authorization {
         get {
             return { () -> NSURL in
-                return NSURL(string: "https://github.com/login/oauth/authorize")!
+                return NSURL(string: "https://soundcloud.com/connect")!
                     .uq_URLByAppendingQueryDictionary([
                         "client_id": self.clientId,
-                        "state": self.state,
-                        "scope": self.scope.joinWithSeparator(" "),
-                        "allow_signup": self.allowSignup ? "true": "false"
+                        "redirect_uri": self.redirectUri,
+                        "response_type": self.responseType,
+                        "scope": self.scope,
+                        "display": self.display,
+                        "state": self.state
                     ])
             }
         }
@@ -46,14 +47,14 @@ public struct GitHubProvider: OAuth2Provider {
                 guard let code = url.uq_queryDictionary()["code"] as? String,
                     let state = url.uq_queryDictionary()["state"] as? String else { return nil }
                 if state != self.state { return nil }
-                let authenticationUrl: NSURL = NSURL(string: "https://github.com/login/oauth/access_token")!
+                let authenticationUrl: NSURL = NSURL(string: "https://api.soundcloud.com/oauth2/token")!
                     .uq_URLByAppendingQueryDictionary([
                         "client_id" : self.clientId,
                         "client_secret": self.clientSecret,
                         "code": code,
                         "redirect_uri": self.redirectUri,
-                        "state": self.state
-                    ])
+                        "grant_type": "authorization_code"
+                        ])
                 let request = NSMutableURLRequest()
                 request.addValue("application/json", forHTTPHeaderField: "Accept")
                 request.HTTPMethod = "POST"
