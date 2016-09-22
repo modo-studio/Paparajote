@@ -171,8 +171,8 @@ GEM
       multi_json (~> 1.11)
       os (~> 0.9)
       signet (~> 0.7)
-    gym (1.9.0)
-      fastlane_core (>= 0.51.0, < 1.0.0)
+    gym (1.10.0)
+      fastlane_core (>= 0.52.0, < 1.0.0)
       plist
       rubyzip (>= 1.1.7)
       terminal-table
