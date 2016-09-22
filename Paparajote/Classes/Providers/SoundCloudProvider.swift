@@ -6,6 +6,7 @@ public struct SoundCloudProvider: OAuth2Provider {
     // MARK: - Attributes
 
     private let clientId: String //client_id
+    private let clientSecret: String //client_secret
     private let redirectUri: String //redirect_uri
     private let responseType: String = "code" //response_type
     private let scope: String = "*" //scope
@@ -14,8 +15,9 @@ public struct SoundCloudProvider: OAuth2Provider {
 
     // MARK: - Init
 
-    public init(clientId: String, redirectUri: String, state: String = String.random()) {
+    public init(clientId: String, clientSecret: String, redirectUri: String, state: String = String.random()) {
         self.clientId = clientId
+        self.clientSecret = clientSecret
         self.redirectUri = redirectUri
         self.state = state
     }
@@ -41,8 +43,23 @@ public struct SoundCloudProvider: OAuth2Provider {
     public var authentication: Authentication {
         get {
             return { url -> NSURLRequest? in
-                //TODO
-                return NSURLRequest()
+                if !url.absoluteString.containsString(self.redirectUri) { return nil }
+                guard let code = url.uq_queryDictionary()["code"] as? String,
+                    let state = url.uq_queryDictionary()["state"] as? String else { return nil }
+                if state != self.state { return nil }
+                let authenticationUrl: NSURL = NSURL(string: "https://api.soundcloud.com/oauth2/token")!
+                    .uq_URLByAppendingQueryDictionary([
+                        "client_id" : self.clientId,
+                        "client_secret": self.clientSecret,
+                        "code": code,
+                        "redirect_uri": self.redirectUri,
+                        "grant_type": "authorization_code"
+                        ])
+                let request = NSMutableURLRequest()
+                request.addValue("application/json", forHTTPHeaderField: "Accept")
+                request.HTTPMethod = "POST"
+                request.URL = authenticationUrl
+                return request.copy() as? NSURLRequest
             }
         }
     }
