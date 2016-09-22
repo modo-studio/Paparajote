@@ -24,7 +24,7 @@ import WebKit
 
      - returns: Initialized instance of OAuth2WKNavigationDelegate.
      */
-    internal init(provider: OAuth2Provider, webView: WKWebView, completion: OAuth2SessionCompletion) {
+    internal init(provider: OAuth2Provider, webView: WKWebView, completion: @escaping OAuth2SessionCompletion) {
         self.provider = provider
         self.webView = webView
         self.completion = completion
@@ -47,23 +47,23 @@ import WebKit
     // MARK: - <WKNavigationDelegate>
 
     public func webView(webView: WKWebView, decidePolicyForNavigationAction navigationAction: WKNavigationAction, decisionHandler: (WKNavigationActionPolicy) -> Void) {
-        guard let url = navigationAction.request.URL else {
-            decisionHandler(WKNavigationActionPolicy.Allow)
+        guard let url = navigationAction.request.url else {
+            decisionHandler(WKNavigationActionPolicy.allow)
             return
         }
         let shouldRedirect = self.controller.shouldRedirect(url: url)
-        decisionHandler(shouldRedirect ? .Allow : .Cancel)
+        decisionHandler(shouldRedirect ? .allow : .cancel)
     }
 
     // MARK: - <OAuth2Delegate>
 
     public func oauth(event event: OAuth2Event) {
         switch event {
-        case .Error(let error):
+        case .error(let error):
             self.completion(nil, error)
-        case .Open(let url):
-            self.webView?.loadRequest(NSURLRequest(URL: url))
-        case .Session(let session):
+        case .open(let url):
+            self.webView?.load(URLRequest(url: url as URL))
+        case .session(let session):
             self.completion(session, nil)
         }
     }

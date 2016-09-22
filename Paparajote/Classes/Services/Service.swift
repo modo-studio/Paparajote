@@ -4,19 +4,19 @@ internal class Service {
 
     // MARK: - Attributes
 
-    private let session: NSURLSession
+    private let session: URLSession
 
     // MARK: - Init
 
-    internal init(session: NSURLSession = NSURLSession.sharedSession()) {
+    internal init(session: URLSession = URLSession.shared) {
         self.session = session
     }
 
     // MARK: - Internal
 
-    internal func execute(request: NSURLRequest, completionHandler: (NSData?, NSURLResponse?, NSError?) -> Void) {
+    internal func execute(request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
         self.session
-            .dataTaskWithRequest(request, completionHandler: completionHandler)
+            .dataTask(with: request, completionHandler: completionHandler)
             .resume()
     }
 

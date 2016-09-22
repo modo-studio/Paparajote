@@ -1,25 +1,33 @@
 PODS:
-  - Nimble (3.2.0)
+  - Nimble (5.0.0)
   - NSURL+QueryDictionary (1.2.0)
-  - Paparajote (0.1.9):
+  - Paparajote (1.0.0):
     - NSURL+QueryDictionary (~> 1.2)
   - Quick (0.9.3)
 
 DEPENDENCIES:
-  - Nimble (~> 3.0)
+  - Nimble (~> 5.0)
   - Paparajote (from `../`)
-  - Quick (~> 0.8)
+  - Quick (from `https://github.com/quick/quick`, commit `e72d6dc86bea6b0200a54c86820a6407cf20ebb0`)
 
 EXTERNAL SOURCES:
   Paparajote:
     :path: "../"
+  Quick:
+    :commit: e72d6dc86bea6b0200a54c86820a6407cf20ebb0
+    :git: https://github.com/quick/quick
+
+CHECKOUT OPTIONS:
+  Quick:
+    :commit: e72d6dc86bea6b0200a54c86820a6407cf20ebb0
+    :git: https://github.com/quick/quick
 
 SPEC CHECKSUMS:
-  Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
+  Nimble: 56fc9f5020effa2206de22c3dd910f4fb011b92f
   NSURL+QueryDictionary: bae616404e2adf6409d3d5c02a093cbf44c8a236
-  Paparajote: 73a998abf9d589e1d621c1fbea0ce3f3dc667fed
-  Quick: 13a2a2b19a5d8e3ed4fd0c36ee46597fd77ebf71
+  Paparajote: 764dcac0bd6c85a7736379bf0a36e8c954fff193
+  Quick: 31fb576b6cbb6b028cc5e0016e4366accbb346f5
 
-PODFILE CHECKSUM: 0fdb5dfe549b46de27104f3bec2b2fd56ac93485
+PODFILE CHECKSUM: 875dd6122bb1b36e44aef8b83f9b0c72ef3fda39
 
 COCOAPODS: 1.1.0.rc.2
