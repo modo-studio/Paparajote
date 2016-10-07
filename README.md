@@ -1,4 +1,4 @@
-# Paparajote
+![header](Assets/Header.png)
 
 [![CI Status](http://img.shields.io/travis/carambalabs/Paparajote.svg?style=flat)](https://travis-ci.org/carambalabs/Paparajote)
 [![codecov](https://codecov.io/gh/carambalabs/Paparajote/branch/master/graph/badge.svg)](https://codecov.io/gh/carambalabs/Paparajote)
