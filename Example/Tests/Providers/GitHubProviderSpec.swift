@@ -41,36 +41,36 @@ class GitHubProviderSpec: QuickSpec {
         describe("-authentication") {
             context("when there's no code in the url") {
                 it("should return nil") {
-                    let url = NSURL(string: "\(redirectUri)?state=abc")!
+                    let url = URL(string: "\(redirectUri)?state=abc")!
                     expect(subject.authentication(url)).to(beNil())
                 }
             }
             context("when there's no state in the url") {
                 it("should return nil") {
-                    let url = NSURL(string: "\(redirectUri)?code=abc")!
+                    let url = URL(string: "\(redirectUri)?code=abc")!
                     expect(subject.authentication(url)).to(beNil())
                 }
             }
             
             context("when it has code and state") {
-                var request: NSURLRequest!
+                var request: URLRequest!
                 
                 beforeEach {
-                    let url = NSURL(string: "\(redirectUri)?code=abc&state=\(state)")!
+                    let url = URL(string: "\(redirectUri)?code=abc&state=\(state)")!
                     request = subject.authentication(url)
                 }
                 
                 it("should return a request with the correct URL") {
                     let expected = "https://github.com/login/oauth/access_token?state=asdg135125&redirect_uri=redirect%3A%2F%2Fworks&client_secret=client_secret&client_id=client_id&code=abc"
-                    expect(request.URL?.absoluteString) == expected
+                    expect(request.url?.absoluteString) == expected
                 }
                 
                 it("should return a request with the a JSON Accept header") {
-                    expect(request.valueForHTTPHeaderField("Accept")) == "application/json"
+                    expect(request.value(forHTTPHeaderField: "Accept")) == "application/json"
                 }
                 
                 it("should return a request with the POST method") {
-                    expect(request.HTTPMethod) == "POST"
+                    expect(request.httpMethod) == "POST"
                 }
             }
         }
@@ -79,16 +79,16 @@ class GitHubProviderSpec: QuickSpec {
         describe("-sessionAdapter") {
             context("when the data has not the correct format") {
                 it("should return nil") {
-                    let dictionary = [:]
-                    let data = try! NSJSONSerialization.dataWithJSONObject(dictionary, options: [])
-                    expect(subject.sessionAdapter(data, NSURLResponse())).to(beNil())
+                    let dictionary = ["ca":"casa"]
+                    let data = try! JSONSerialization.data(withJSONObject: dictionary, options: [])
+                    expect(subject.sessionAdapter(data, URLResponse())).to(beNil())
                 }
             }
             context("when the data has the correct format") {
                 it("should return the session") {
                     let dictionary = ["access_token": "tooooken"]
-                    let data = try! NSJSONSerialization.dataWithJSONObject(dictionary, options: [])
-                    expect(subject.sessionAdapter(data, NSURLResponse())?.accessToken) == "tooooken"
+                    let data = try! JSONSerialization.data(withJSONObject: dictionary, options: [])
+                    expect(subject.sessionAdapter(data, URLResponse())?.accessToken) == "tooooken"
                 }
             }
         }

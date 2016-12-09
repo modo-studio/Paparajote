@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Paparajote'
-  s.version          = '0.1.12'
+  s.version          = '1.0.0'
   s.summary          = 'OAuth2 handler written in Swift'
   s.homepage         = 'https://github.com/carambalabs/Paparajote'
   s.social_media_url = "https://twitter.com/carambalabs"

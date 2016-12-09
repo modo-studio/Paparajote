@@ -1,13 +1,13 @@
 import Foundation
 
 /// Returns the url to start the authorizzation flow.
-public typealias Authorization = () -> NSURL
+public typealias Authorization = () -> URL
 
 /// Given a redirection URL, if it contains the authentication token, this method should return the request for authenticating the user.
-public typealias Authentication = NSURL -> NSURLRequest?
+public typealias Authentication = (URL) -> URLRequest?
 
 /// The adapter tries to fetch the session from the authentication response.
-public typealias SessionAdapter = (NSData, NSURLResponse) -> OAuth2Session?
+public typealias SessionAdapter = (Data, URLResponse) -> OAuth2Session?
 
 public protocol OAuth2Provider {
 
