@@ -2,17 +2,17 @@ import Foundation
 import NSURL_QueryDictionary
 
 public struct UnsplashProvider: OAuth2Provider {
-    
+
     // MARK: - Attributes
-    
+
     fileprivate let clientId: String
     fileprivate let clientSecret: String
     fileprivate let redirectUri: String
     fileprivate let scope: [String]
     fileprivate let responseType: String = "code"
-    
+
     // MARK: - Init
-    
+
     public init(clientId: String,
                 clientSecret: String,
                 redirectUri: String,
@@ -22,9 +22,9 @@ public struct UnsplashProvider: OAuth2Provider {
         self.redirectUri = redirectUri
         self.scope = scope
     }
-    
+
     // MARK: - Oauth2Provider
-    
+
     /// Provider authorization.
     public var authorization: Authorization {
         get {
@@ -67,7 +67,9 @@ public struct UnsplashProvider: OAuth2Provider {
     public var sessionAdapter: SessionAdapter = { (data,  _) -> OAuth2Session? in
         let json = try? JSONSerialization.jsonObject(with: data, options: [])
         guard let dictionary = json as? [String: String] else { return nil }
-        return dictionary["access_token"].map {OAuth2Session(accessToken: $0, refreshToken: nil)}
+        let token = dictionary["access_token"]
+        let refresh = dictionary["refresh_token"]
+        return token.map {OAuth2Session(accessToken: $0, refreshToken: refresh)}
     }
-    
+
 }
