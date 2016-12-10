@@ -5,7 +5,7 @@ import WebKit
 
 /// OAuth2 WKWebView
 @available(OSX 10.10, *)
-public class OAuth2WKWebView: WKWebView {
+open class OAuth2WKWebView: WKWebView {
 
     // MARK: - Attributes
 
@@ -24,10 +24,14 @@ public class OAuth2WKWebView: WKWebView {
 
      - returns: Initialized OAuth2WebView.
      */
-    public init(frame: CGRect, provider: OAuth2Provider, completion: OAuth2SessionCompletion) throws {
+    public init(frame: CGRect, provider: OAuth2Provider, completion: @escaping OAuth2SessionCompletion) throws {
         super.init(frame: frame, configuration: WKWebViewConfiguration())
         self.oauthDelegate = OAuth2WKNavigationDelegate(provider: provider, webView: self, completion: completion)
         try self.oauthDelegate.start()
+    }
+
+    required public init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
 }

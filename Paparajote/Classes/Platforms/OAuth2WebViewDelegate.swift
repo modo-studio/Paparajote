@@ -24,7 +24,9 @@ import UIKit
 
      - returns: Initialized OAuth2WebViewDelegate instance.
      */
-    public init(provider: OAuth2Provider, webView: UIWebView, completion: OAuth2SessionCompletion) {
+    public init(provider: OAuth2Provider,
+                webView: UIWebView,
+                completion: @escaping OAuth2SessionCompletion) {
         self.provider = provider
         self.webView = webView
         self.completion = completion
@@ -52,22 +54,23 @@ import UIKit
 
     // MARK: - <OAuth2Delegate>
 
-    public func oauth(event event: OAuth2Event) {
+    public func oauth(event: OAuth2Event) {
         switch event {
-        case .Error(let error):
+        case .error(let error):
             self.completion(nil, error)
-        case .Open(let url):
-            self.webView?.loadRequest(NSURLRequest(URL: url))
-        case .Session(let session):
+        case .open(let url):
+            self.webView?.loadRequest(URLRequest(url: url))
+        case .session(let session):
             self.completion(session, nil)
         }
     }
 
     // MARK: - <UIWebViewDelegate>
-
-    public func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        return self.controller.shouldRedirect(url: request.URL!) ?? true
+    
+    public func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        return self.controller.shouldRedirect(url: request.url!) 
     }
+
 }
 
 #endif

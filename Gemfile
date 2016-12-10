@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "cocoapods", "1.1.0rc2"
+gem "cocoapods"
 gem "fastlane"
 
 # Danger

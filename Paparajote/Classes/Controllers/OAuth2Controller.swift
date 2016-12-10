@@ -1,6 +1,6 @@
 import Foundation
 
-public class OAuth2Controller {
+open class OAuth2Controller {
 
     // MARK: - Attributes
 
@@ -23,15 +23,15 @@ public class OAuth2Controller {
 
     // MARK: - Pubic
 
-    public func start() throws {
+    open func start() throws {
         if self.inProgress {
-            throw OAuth2Error.AlreadyStarted
+            throw OAuth2Error.alreadyStarted
         }
         self.inProgress = true
-        self.delegate?.oauth(event: .Open(url: self.provider.authorization()))
+        self.delegate?.oauth(event: .open(url: self.provider.authorization()))
     }
 
-    public func shouldRedirect(url url: NSURL) -> Bool {
+    open func shouldRedirect(url: URL) -> Bool {
         guard let request = self.provider.authentication(url) else { return true }
         self.authenticate(request: request)
         return false
@@ -39,18 +39,18 @@ public class OAuth2Controller {
 
     // MARK: - Private
 
-    private func authenticate(request request: NSURLRequest) {
+    fileprivate func authenticate(request: URLRequest) {
         self.service.execute(request) { [weak self] (data, response, error) in
-            if let data = data, response = response {
+            if let data = data, let response = response {
                 if let session = self?.provider.sessionAdapter(data, response) {
-                    self?.delegate?.oauth(event: .Session(session))
+                    self?.delegate?.oauth(event: .session(session))
                 } else {
-                    self?.delegate?.oauth(event: .Error(OAuth2Error.SessionNotFound))
+                    self?.delegate?.oauth(event: .error(OAuth2Error.sessionNotFound))
                 }
             } else if let error = error {
-                self?.delegate?.oauth(event: .Error(error))
+                self?.delegate?.oauth(event: .error(error))
             } else {
-                self?.delegate?.oauth(event: .Error(OAuth2Error.NoResponse))
+                self?.delegate?.oauth(event: .error(OAuth2Error.noResponse))
             }
             self?.inProgress = false
         }

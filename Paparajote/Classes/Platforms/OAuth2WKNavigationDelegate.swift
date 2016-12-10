@@ -4,14 +4,14 @@ import WebKit
 
 /// WKNavigationDelegate that handles the OAuth2 flow.
 @available(OSX 10.10, *)
-@objc public class OAuth2WKNavigationDelegate: NSObject, WKNavigationDelegate, OAuth2Delegate {
+@objc open class OAuth2WKNavigationDelegate: NSObject, WKNavigationDelegate, OAuth2Delegate {
 
     // MARK: - Attributes
 
-    private let provider: OAuth2Provider
-    private var controller: OAuth2Controller!
-    private weak var webView: WKWebView?
-    private let completion: OAuth2SessionCompletion
+    fileprivate let provider: OAuth2Provider
+    fileprivate var controller: OAuth2Controller!
+    fileprivate weak var webView: WKWebView?
+    fileprivate let completion: OAuth2SessionCompletion
 
     // MARK: - Init
 
@@ -24,7 +24,7 @@ import WebKit
 
      - returns: Initialized instance of OAuth2WKNavigationDelegate.
      */
-    internal init(provider: OAuth2Provider, webView: WKWebView, completion: OAuth2SessionCompletion) {
+    internal init(provider: OAuth2Provider, webView: WKWebView, completion: @escaping OAuth2SessionCompletion) {
         self.provider = provider
         self.webView = webView
         self.completion = completion
@@ -37,7 +37,7 @@ import WebKit
 
      - throws: It throws an exception if this method is called again once the flow has started.
      */
-    public func start() throws {
+    open func start() throws {
         if self.controller == nil {
             self.controller = OAuth2Controller(provider: self.provider, delegate: self)
         }
@@ -46,24 +46,24 @@ import WebKit
 
     // MARK: - <WKNavigationDelegate>
 
-    public func webView(webView: WKWebView, decidePolicyForNavigationAction navigationAction: WKNavigationAction, decisionHandler: (WKNavigationActionPolicy) -> Void) {
-        guard let url = navigationAction.request.URL else {
-            decisionHandler(WKNavigationActionPolicy.Allow)
+    open func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        guard let url = navigationAction.request.url else {
+            decisionHandler(WKNavigationActionPolicy.allow)
             return
         }
         let shouldRedirect = self.controller.shouldRedirect(url: url)
-        decisionHandler(shouldRedirect ? .Allow : .Cancel)
+        decisionHandler(shouldRedirect ? .allow : .cancel)
     }
 
     // MARK: - <OAuth2Delegate>
 
-    public func oauth(event event: OAuth2Event) {
+    open func oauth(event: OAuth2Event) {
         switch event {
-        case .Error(let error):
+        case .error(let error):
             self.completion(nil, error)
-        case .Open(let url):
-            self.webView?.loadRequest(NSURLRequest(URL: url))
-        case .Session(let session):
+        case .open(let url):
+            _ = self.webView?.load(URLRequest(url: url))
+        case .session(let session):
             self.completion(session, nil)
         }
     }

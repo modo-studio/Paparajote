@@ -23,7 +23,9 @@ public class OAuth2WebView: UIWebView {
 
      - returns: Initialized OAuth2WebView.
      */
-    public init(frame: CGRect, provider: OAuth2Provider, completion: OAuth2SessionCompletion) throws {
+    public init(frame: CGRect,
+                provider: OAuth2Provider,
+                completion: @escaping OAuth2SessionCompletion) throws {
         super.init(frame: frame)
         self.oauthDelegate = OAuth2WebViewDelegate(provider: provider, webView: self, completion: completion)
         try self.oauthDelegate.start()

@@ -7,10 +7,10 @@ import Foundation
  - NoResponse:      We didn't get any response when trying to authenticate the user.
  - SessionNotFound: The session couldn't be found from the authentication endpoint response.
  */
-public enum OAuth2Error: ErrorType {
-    case AlreadyStarted
-    case NoResponse
-    case SessionNotFound
+public enum OAuth2Error: Error {
+    case alreadyStarted
+    case noResponse
+    case sessionNotFound
 }
 
 // MARK: - CustomStringConvertible
@@ -19,11 +19,11 @@ extension OAuth2Error: CustomStringConvertible {
 
     public var description: String {
         switch self {
-        case .AlreadyStarted:
+        case .alreadyStarted:
             return "Oauth2 flow already started."
-        case .NoResponse:
+        case .noResponse:
             return "No response from the provider."
-        case .SessionNotFound:
+        case .sessionNotFound:
             return "Session not found"
         }
     }

@@ -1,25 +1,25 @@
 PODS:
-  - Nimble (3.2.0)
+  - Nimble (5.1.1)
   - NSURL+QueryDictionary (1.2.0)
-  - Paparajote (0.1.9):
+  - Paparajote (0.1.12):
     - NSURL+QueryDictionary (~> 1.2)
-  - Quick (0.9.3)
+  - Quick (1.0.0)
 
 DEPENDENCIES:
-  - Nimble (~> 3.0)
+  - Nimble
   - Paparajote (from `../`)
-  - Quick (~> 0.8)
+  - Quick
 
 EXTERNAL SOURCES:
   Paparajote:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
+  Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
   NSURL+QueryDictionary: bae616404e2adf6409d3d5c02a093cbf44c8a236
-  Paparajote: 73a998abf9d589e1d621c1fbea0ce3f3dc667fed
-  Quick: 13a2a2b19a5d8e3ed4fd0c36ee46597fd77ebf71
+  Paparajote: e7f0435daf10bfba55853c9304ef159f23028784
+  Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
 
-PODFILE CHECKSUM: 0fdb5dfe549b46de27104f3bec2b2fd56ac93485
+PODFILE CHECKSUM: 3d26cb39d1450a4534259f2162e0106af1a81fd1
 
-COCOAPODS: 1.1.0.rc.2
+COCOAPODS: 1.1.1

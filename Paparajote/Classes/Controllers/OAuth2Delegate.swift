@@ -7,6 +7,6 @@ public protocol OAuth2Delegate: class {
 
      - parameter event: Eventn to be processed.
      */
-    func oauth(event event: OAuth2Event)
+    func oauth(event: OAuth2Event)
 
 }
