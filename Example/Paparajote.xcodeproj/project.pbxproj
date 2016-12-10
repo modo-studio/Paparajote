@@ -7,20 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		237C17561D76313100CB3B4F /* GitHubProviderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C17551D76313100CB3B4F /* GitHubProviderSpec.swift */; };
-		23A5DC741D945BD10036CC9F /* SoundCloudProviderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A5DC731D945BD10036CC9F /* SoundCloudProviderSpec.swift */; };
+		233446E41DFC778400C5428D /* OAuth2ControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA8BE41D675D79008333A4 /* OAuth2ControllerSpec.swift */; };
+		233446E51DFC779500C5428D /* OAuth2ErrorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA8BEA1D67694D008333A4 /* OAuth2ErrorSpec.swift */; };
+		233446E61DFC77AF00C5428D /* GitHubProviderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C17551D76313100CB3B4F /* GitHubProviderSpec.swift */; };
+		233446E71DFC796800C5428D /* SoundCloudProviderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A5DC731D945BD10036CC9F /* SoundCloudProviderSpec.swift */; };
+		233446E81DFC79C700C5428D /* UnsplashProviderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233446E21DFC0D9E00C5428D /* UnsplashProviderSpec.swift */; };
+		233446E91DFC79EA00C5428D /* OAuth2WKNavigationDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA8C041D6C7474008333A4 /* OAuth2WKNavigationDelegateSpec.swift */; };
+		233446EA1DFC79F700C5428D /* OAuth2WebViewDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA8BFE1D6C5A60008333A4 /* OAuth2WebViewDelegateSpec.swift */; };
 		23A5DC7C1D9461E90036CC9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A5DC7B1D9461E90036CC9F /* AppDelegate.swift */; };
 		23A5DC7E1D9461E90036CC9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23A5DC7D1D9461E90036CC9F /* Assets.xcassets */; };
 		23A5DC811D9461E90036CC9F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23A5DC7F1D9461E90036CC9F /* MainMenu.xib */; };
-		23EA8BE51D675D79008333A4 /* OAuth2ControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA8BE41D675D79008333A4 /* OAuth2ControllerSpec.swift */; };
-		23EA8BEB1D67694D008333A4 /* OAuth2ErrorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA8BEA1D67694D008333A4 /* OAuth2ErrorSpec.swift */; };
-		23EA8BFF1D6C5A60008333A4 /* OAuth2WebViewDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA8BFE1D6C5A60008333A4 /* OAuth2WebViewDelegateSpec.swift */; };
-		23EA8C051D6C7474008333A4 /* OAuth2WKNavigationDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA8C041D6C7474008333A4 /* OAuth2WKNavigationDelegateSpec.swift */; };
 		A4A70371AE49E445EA16D847 /* Pods_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506DA19D294894AFFD6D177D /* Pods_macOS.framework */; };
 		FF91210E4977A690F75DDA69 /* Pods_Paparajote_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36C7E3B884422DF922B6C8F6 /* Pods_Paparajote_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		233446E21DFC0D9E00C5428D /* UnsplashProviderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnsplashProviderSpec.swift; sourceTree = "<group>"; };
 		237C17551D76313100CB3B4F /* GitHubProviderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubProviderSpec.swift; sourceTree = "<group>"; };
 		23A5DC731D945BD10036CC9F /* SoundCloudProviderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundCloudProviderSpec.swift; sourceTree = "<group>"; };
 		23A5DC791D9461E90036CC9F /* macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +75,7 @@
 			children = (
 				237C17551D76313100CB3B4F /* GitHubProviderSpec.swift */,
 				23A5DC731D945BD10036CC9F /* SoundCloudProviderSpec.swift */,
+				233446E21DFC0D9E00C5428D /* UnsplashProviderSpec.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -417,12 +420,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23EA8BEB1D67694D008333A4 /* OAuth2ErrorSpec.swift in Sources */,
-				23A5DC741D945BD10036CC9F /* SoundCloudProviderSpec.swift in Sources */,
-				237C17561D76313100CB3B4F /* GitHubProviderSpec.swift in Sources */,
-				23EA8BE51D675D79008333A4 /* OAuth2ControllerSpec.swift in Sources */,
-				23EA8C051D6C7474008333A4 /* OAuth2WKNavigationDelegateSpec.swift in Sources */,
-				23EA8BFF1D6C5A60008333A4 /* OAuth2WebViewDelegateSpec.swift in Sources */,
+				233446E61DFC77AF00C5428D /* GitHubProviderSpec.swift in Sources */,
+				233446E71DFC796800C5428D /* SoundCloudProviderSpec.swift in Sources */,
+				233446EA1DFC79F700C5428D /* OAuth2WebViewDelegateSpec.swift in Sources */,
+				233446E91DFC79EA00C5428D /* OAuth2WKNavigationDelegateSpec.swift in Sources */,
+				233446E51DFC779500C5428D /* OAuth2ErrorSpec.swift in Sources */,
+				233446E41DFC778400C5428D /* OAuth2ControllerSpec.swift in Sources */,
+				233446E81DFC79C700C5428D /* UnsplashProviderSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

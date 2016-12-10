@@ -12,7 +12,7 @@ class OAuth2WKNavigationDelegateSpec: QuickSpec {
         var provider: MockProvider!
         var webView: MockWebView!
         var completionSession: OAuth2Session!
-        var completionError: ErrorType!
+        var completionError: Error!
         
         beforeEach {
             provider = MockProvider()
@@ -29,7 +29,7 @@ class OAuth2WKNavigationDelegateSpec: QuickSpec {
             }
             
             it("should load the correct request in the webview") {
-                expect(webView.loadedRequest.URL) == NSURL(string: "test://test")!
+                expect(webView.loadedRequest.url) == URL(string: "test://test")!
             }
             
             it("should throw an error if start is called once the flow has been started") {
@@ -46,13 +46,13 @@ class OAuth2WKNavigationDelegateSpec: QuickSpec {
 
 private struct MockProvider: OAuth2Provider {
     
-    var authorization: Authorization = { () -> NSURL in
-        return NSURL(string: "test://test")!
+    var authorization: Authorization = { () -> URL in
+        return URL(string: "test://test")!
     }
     
-    var authentication: Authentication = { url -> NSURLRequest? in
-        if url.absoluteString.containsString("request") {
-            return NSURLRequest(URL: url)
+    var authentication: Authentication = { url -> URLRequest? in
+        if url.absoluteString.contains("request") {
+            return URLRequest(url: url)
         }
         return nil
     }
@@ -65,9 +65,9 @@ private struct MockProvider: OAuth2Provider {
 
 private class MockWebView: WKWebView {
     
-    private var loadedRequest: NSURLRequest!
+    fileprivate var loadedRequest: URLRequest!
     
-    private override func loadRequest(request: NSURLRequest) -> WKNavigation? {
+    fileprivate override func load(_ request: URLRequest) -> WKNavigation? {
         self.loadedRequest = request
         return nil
     }

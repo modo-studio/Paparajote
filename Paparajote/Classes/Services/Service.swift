@@ -14,9 +14,9 @@ internal class Service {
 
     // MARK: - Internal
 
-    internal func execute(_ request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, NSError?) -> Void) {
+    internal func execute(_ request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
         self.session
-            .dataTask(with: request, completionHandler: completionHandler as! (Data?, URLResponse?, Error?) -> Void)
+            .dataTask(with: request, completionHandler: completionHandler)
             .resume()
     }
 

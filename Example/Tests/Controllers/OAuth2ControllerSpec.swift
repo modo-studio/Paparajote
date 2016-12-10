@@ -24,39 +24,39 @@ class OAuth2ControllerSpec: QuickSpec {
                 try! subject.start()
             }
             it("should notify the delegate") {
-                let expected = OAuth2Event.Open(url: NSURL(string: "test://authorization")!)
+                let expected = OAuth2Event.open(url: URL(string: "test://authorization")!)
                 expect(delegate.receivedEvent) == expected
             }
             
             it("should assert if we try to start the flow once started") {
                 expect {
                     try subject.start()
-                }.to(throwError(OAuth2Error.AlreadyStarted))
+                }.to(throwError(OAuth2Error.alreadyStarted))
             }
         }
         
         describe("-shouldRedirect:url:") {
 
             it("should return if the the authentication request is not generated") {
-                subject.shouldRedirect(url: NSURL(string: "test://test")!)
+                _ = subject.shouldRedirect(url: NSURL(string: "test://test")! as URL)
                 expect(service.called) == false
             }
             
             context("when the entity returns an authentication request") {
                 
                 beforeEach {
-                    provider = MockProvider(authenticationRequest: NSURLRequest(URL: NSURL(string: "test://")!), session: nil)
+                    provider = MockProvider(authenticationRequest: URLRequest(url: URL(string: "test://")!), session: nil)
                     subject = OAuth2Controller(provider: provider, delegate: delegate, service: service)
                 }
                 
                 it("should execute the request") {
-                    subject.shouldRedirect(url: NSURL(string: "test://test")!)
+                    _ = subject.shouldRedirect(url: URL(string: "test://test")!)
                     expect(service.called) == true
                 }
                 
                 it("should notify the delegate that there's no response") {
-                    subject.shouldRedirect(url: NSURL(string: "test://test")!)
-                    expect(delegate.receivedEvent) == OAuth2Event.Error(OAuth2Error.NoResponse)
+                    _ = subject.shouldRedirect(url: URL(string: "test://test")!)
+                    expect(delegate.receivedEvent) == OAuth2Event.error(OAuth2Error.noResponse)
                 }
                 
                 it("shouldn't assert if we try to start the flow again") {
@@ -76,14 +76,14 @@ class OAuth2ControllerSpec: QuickSpec {
                     }
                     
                     it("should notify the delegate about the error") {
-                        subject.shouldRedirect(url: NSURL(string: "test://test")!)
-                        expect(delegate.receivedEvent) == OAuth2Event.Error(error)
+                        _ = subject.shouldRedirect(url: NSURL(string: "test://test")! as URL)
+                        expect(delegate.receivedEvent) == OAuth2Event.error(error)
                     }
                 }
                 
                 context("when the service returns data") {
                     beforeEach {
-                        service = MockService(data: NSData(), response: NSURLResponse())
+                        service = MockService(data: Data(), response: URLResponse())
                     }
                     
                     context("and the session can be parsed") {
@@ -91,26 +91,26 @@ class OAuth2ControllerSpec: QuickSpec {
                         
                         beforeEach {
                             session = OAuth2Session(accessToken: "token", refreshToken: "refresh")
-                            provider = MockProvider(authenticationRequest: NSURLRequest(URL: NSURL(string: "test://")!), session: session)
+                            provider = MockProvider(authenticationRequest: URLRequest(url: URL(string: "test://")!), session: session)
                             subject = OAuth2Controller(provider: provider, delegate: delegate, service: service)
                         }
                         
                         it("should notify the delegate about the new session") {
-                            subject.shouldRedirect(url: NSURL(string: "test://test")!)
-                            expect(delegate.receivedEvent) == OAuth2Event.Session(session)
+                            _ = subject.shouldRedirect(url: NSURL(string: "test://test")! as URL)
+                            expect(delegate.receivedEvent) == OAuth2Event.session(session)
                         }
                     }
                     
                     context("and the session cannot be parsed") {
                         
                         beforeEach {
-                            provider = MockProvider(authenticationRequest: NSURLRequest(URL: NSURL(string: "test://")!), session: nil)
+                            provider = MockProvider(authenticationRequest: URLRequest(url: URL(string: "test://")!), session: nil)
                             subject = OAuth2Controller(provider: provider, delegate: delegate, service: service)
                         }
                         
                         it("should notify the delegate about the new session") {
-                            subject.shouldRedirect(url: NSURL(string: "test://test")!)
-                            expect(delegate.receivedEvent) == OAuth2Event.Error(OAuth2Error.SessionNotFound)
+                            _ = subject.shouldRedirect(url: URL(string: "test://test")!)
+                            expect(delegate.receivedEvent) == OAuth2Event.error(OAuth2Error.sessionNotFound)
                         }
                     }
                 }
@@ -126,20 +126,20 @@ class OAuth2ControllerSpec: QuickSpec {
 
 private struct MockProvider: OAuth2Provider {
     
-    private let authenticationRequest: NSURLRequest!
+    private let authenticationRequest: URLRequest!
     private let session: OAuth2Session!
     
-    init(authenticationRequest: NSURLRequest! = nil, session: OAuth2Session! = nil) {
+    init(authenticationRequest: URLRequest! = nil, session: OAuth2Session! = nil) {
         self.authenticationRequest = authenticationRequest
         self.session = session
     }
     
     var authorization: Authorization = {
-        return NSURL(string: "test://authorization")!
+        return URL(string: "test://authorization")!
     }
     
     var authentication: Authentication {
-        return { (url: NSURL) -> NSURLRequest? in
+        return { (url: URL) -> URLRequest? in
             return self.authenticationRequest
         }
     }
@@ -156,7 +156,7 @@ private class MockDelegate: OAuth2Delegate {
     
     var receivedEvent: OAuth2Event!
     
-    private func oauth(event event: OAuth2Event) {
+    fileprivate func oauth(event: OAuth2Event) {
         self.receivedEvent = event
     }
     
@@ -165,17 +165,17 @@ private class MockDelegate: OAuth2Delegate {
 private class MockService: Service {
     
     var called: Bool = false
-    var data: NSData!
-    var response: NSURLResponse!
+    var data: Data!
+    var response: URLResponse!
     var error: NSError!
     
-    init(data: NSData! = nil, response: NSURLResponse! = nil, error: NSError! = nil) {
+    init(data: Data! = nil, response: URLResponse! = nil, error: NSError! = nil) {
         self.data = data
         self.response = response
         self.error = error
     }
     
-    private override func execute(request: NSURLRequest, completionHandler: (NSData?, NSURLResponse?, NSError?) -> Void) {
+    fileprivate override func execute(_ request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
         self.called = true
         completionHandler(self.data, self.response, self.error)
     }
