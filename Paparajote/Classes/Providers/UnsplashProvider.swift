@@ -34,7 +34,7 @@ public struct UnsplashProvider: OAuth2Provider {
                         "client_id": self.clientId,
                         "redirect_uri": self.redirectUri,
                         "response_type": self.responseType,
-                        "scope": self.scope.joined(separator: "+")
+                        "scope": self.scope.joined(separator: " ")
                         ])
             }
         }
