@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
   s.name             = 'Paparajote'
-  s.version          = '1.1.1'
+  s.version          = '1.1.2'
   s.summary          = 'OAuth2 handler written in Swift'
   s.homepage         = 'https://github.com/carambalabs/Paparajote'
-  s.social_media_url = "https://twitter.com/carambalabs"
+  s.social_media_url = "https://twitter.com/carambalabsEng"
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Pedro Piñera' => 'pepibumur@gmail.com', 'Sergi Gracia' => 'sergigram@gmail.com', 'Isaac Roldán' => "isaac.roldan@gmail.com" }
-  s.source           = { :git => 'https://github.com/carambalabs/Paparajote.git', :tag => s.version.to_s }
+  s.source           = { :git => 'git@gitlab.com:caramba/Paparajote.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '8.0'
 
