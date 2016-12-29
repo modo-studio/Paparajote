@@ -1,6 +1,6 @@
 ![header](Assets/Header.png)
 
-[![CI Status](http://img.shields.io/travis/carambalabs/Paparajote.svg?style=flat)](https://travis-ci.org/carambalabs/Paparajote)
+[![build status](https://gitlab.com/caramba/Paparajote/badges/master/build.svg)](https://gitlab.com/caramba/Paparajote/commits/master)
 [![codecov](https://codecov.io/gh/carambalabs/Paparajote/branch/master/graph/badge.svg)](https://codecov.io/gh/carambalabs/Paparajote)
 
 ## Example
