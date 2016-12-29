@@ -16,14 +16,26 @@ deploy_cocoapods:
   when: manual
   only:
     - master
+  tags:
+  - xcode_8
+  - ruby_2-3
+  - bundler
 build:
   stage: build
   script:
     - bundle exec fastlane build
+  tags:
+  - xcode_8
+  - ruby_2-3
+  - bundler
 test:
   stage: test
   script:
     - bundle exec fastlane test
+  tags:
+  - xcode_8
+  - ruby_2-3
+  - bundler
   artifacts:
     paths:
     - fastlane/**/*.xml
