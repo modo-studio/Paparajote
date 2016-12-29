@@ -1,7 +1,7 @@
 ![header](Assets/Header.png)
 
 [![build status](https://gitlab.com/caramba/Paparajote/badges/master/build.svg)](https://gitlab.com/caramba/Paparajote/commits/master)
-[![codecov](https://codecov.io/gh/carambalabs/Paparajote/branch/master/graph/badge.svg)](https://codecov.io/gh/carambalabs/Paparajote)
+[![codecov](https://codecov.io/gl/caramba/Paparajote/branch/master/graph/badge.svg)](https://codecov.io/gl/caramba/Paparajote)
 
 ## Example
 
