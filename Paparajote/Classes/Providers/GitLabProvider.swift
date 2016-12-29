@@ -56,6 +56,7 @@ public struct GitLabProvider: OAuth2Provider {
                     URLQueryItem(name: "client_id", value: self.clientId),
                     URLQueryItem(name: "client_secret", value: self.clientSecret),
                     URLQueryItem(name: "code", value: code),
+                    URLQueryItem(name: "redirect_uri", value: self.redirectUri),
                     URLQueryItem(name: "grant_type", value: "authorization_code")
                 ]
                 let request = NSMutableURLRequest()
@@ -69,9 +70,9 @@ public struct GitLabProvider: OAuth2Provider {
 
     public var sessionAdapter: SessionAdapter = { (data,  _) -> OAuth2Session? in
         let json = try? JSONSerialization.jsonObject(with: data, options: [])
-        guard let dictionary = json as? [String: String] else { return nil }
-        let token = dictionary["access_token"]
-        let refresh = dictionary["refresh_token"]
+        guard let dictionary = json as? [String: Any] else { return nil }
+        let token = dictionary["access_token"] as? String
+        let refresh = dictionary["refresh_token"] as? String
         return token.map {OAuth2Session(accessToken: $0, refreshToken: refresh)}
     }
 }
