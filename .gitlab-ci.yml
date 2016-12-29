@@ -1,0 +1,31 @@
+cache:
+  paths:
+  - Example/Pods
+before_script:
+  - bundle install
+  - bundle exec pod install --project-directory=Example
+stages:
+  - build
+  - test
+  - deploy
+deploy_cocoapods:
+  stage: deploy
+  script:
+    - bundle exec fastlane push
+  environment: cocoapods
+  when: manual
+  only:
+    - master
+build:
+  stage: build
+  script:
+    - bundle exec fastlane build
+test:
+  stage: test
+  script:
+    - bundle exec fastlane test
+  artifacts:
+    paths:
+    - fastlane/**/*.xml
+    - fastlane/**/*.junit
+    - fastlane/**/*.html
