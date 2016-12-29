@@ -1,9 +1,12 @@
 lane :test do
-  scan(workspace: "Example/Paparajote.xcworkspace", scheme: "Tests", clean: true)
-end
-
-lane :build do
-  xcodebuild(workspace: "Example/Paparajote.xcworkspace", scheme: "macOS", destination: "platform=OS X,arch=x86_64", build_settings: {"ONLY_ACTIVE_ARCH" => "NO", "CODE_SIGNING_REQUIRED" => "NO", "CODE_SIGN_IDENTITY" => "" } )
+  scan(output_types: "html, junit", 
+    workspace: "Example/Paparajote.xcworkspace", 
+    scheme: "Tests", 
+    verbose: true, 
+    clean: true, 
+    destination: "platform=macOS,arch=x86_64",
+    sdk: "macosx10.12",
+    xcargs: "ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY=\"\"")
 end
 
 lane :push do

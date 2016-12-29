@@ -1,11 +1,6 @@
 use_frameworks!
-target 'Paparajote_Tests' do
+target 'Tests' do
   pod 'Paparajote', :path => '../'
   pod 'Quick'
   pod 'Nimble'
-end
-
-
-target 'macOS' do
-  pod 'Paparajote', :path => '../'  
 end

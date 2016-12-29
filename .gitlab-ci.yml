@@ -5,7 +5,6 @@ before_script:
   - bundle install
   - bundle exec pod install --project-directory=Example
 stages:
-  - build
   - test
   - deploy
 deploy_cocoapods:
@@ -16,14 +15,6 @@ deploy_cocoapods:
   when: manual
   only:
     - master
-  tags:
-  - xcode_8
-  - ruby_2-3
-  - bundler
-build:
-  stage: build
-  script:
-    - bundle exec fastlane build
   tags:
   - xcode_8
   - ruby_2-3

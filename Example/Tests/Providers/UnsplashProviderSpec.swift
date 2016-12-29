@@ -27,7 +27,7 @@ class UnsplashProviderSpec: QuickSpec {
         
         describe("-authorization") {
             it("should return the correct url") {
-                let expected = "https://unsplash.com/oauth/authorize?response_type=code&scope=scope1%2Bscope2&redirect_uri=redirect%3A%2F%2Fworks&client_id=client_id"
+                let expected = "https://unsplash.com/oauth/authorize?response_type=code&scope=scope1%20scope2&redirect_uri=redirect%3A%2F%2Fworks&client_id=client_id"
                 expect(subject.authorization().absoluteString) == expected
             }
         }
