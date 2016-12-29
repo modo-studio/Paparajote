@@ -2,7 +2,6 @@
 
 [![CI Status](http://img.shields.io/travis/carambalabs/Paparajote.svg?style=flat)](https://travis-ci.org/carambalabs/Paparajote)
 [![codecov](https://codecov.io/gh/carambalabs/Paparajote/branch/master/graph/badge.svg)](https://codecov.io/gh/carambalabs/Paparajote)
-[![Dependency Status](https://gemnasium.com/badges/github.com/carambalabs/Paparajote.svg)](https://gemnasium.com/github.com/carambalabs/Paparajote)
 
 ## Example
 
