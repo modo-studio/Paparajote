@@ -5,7 +5,7 @@ before_script:
   - bundle install
   - bundle exec pod install --project-directory=Example
 after_script:
-  - bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN
 stages:
   - build
   - test
