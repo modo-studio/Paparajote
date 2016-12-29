@@ -1,5 +1,8 @@
 ## Changelog
 
+### 1.1.3
+- Add new provider: `GiLab`
+
 ### 1.0.2
 - Add new provider: `Unsplash`
 
