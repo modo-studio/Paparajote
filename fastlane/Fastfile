@@ -1,5 +1,5 @@
 lane :test do
-  scan(workspace: "Example/Paparajote.xcworkspace", scheme: "Tests", destination: "platform=iOS Simulator,OS=9.3,name=iPhone 6", clean: true)
+  scan(workspace: "Example/Paparajote.xcworkspace", scheme: "Tests", clean: true)
 end
 
 lane :build do
