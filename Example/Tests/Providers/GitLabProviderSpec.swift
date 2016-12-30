@@ -54,7 +54,7 @@ class GitLabProviderSpec: QuickSpec {
                 }
                 
                 it("should return a request with the correct URL") {
-                    let expected = "https://gitlab.com/oauth/token?client_id=client_id&client_secret=client_secret&code=abc&grant_type=authorization_code"
+                    let expected = "https://gitlab.com/oauth/token?client_id=client_id&client_secret=client_secret&code=abc&redirect_uri=redirect://works&grant_type=authorization_code"
                     expect(request.url?.absoluteString) == expected
                 }
                 
