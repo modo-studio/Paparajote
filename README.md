@@ -1,8 +1,5 @@
 ![header](Assets/Header.png)
 
-[![build status](https://gitlab.com/caramba/Paparajote/badges/master/build.svg)](https://gitlab.com/caramba/Paparajote/commits/master)
-[![codecov](https://codecov.io/gl/caramba/Paparajote/branch/master/graph/badge.svg)](https://codecov.io/gl/caramba/Paparajote)
-
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
